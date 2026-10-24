@@ -16,7 +16,7 @@ The lazy payoff is avoiding the repetitive job of sorting chats one by one while
 
 ## Demo
 
-Video: https://raw.githubusercontent.com/zSnowww/slothsort/200e44c5d14d579bb149791fc6ae1d4af98d7210/docs/demo.mp4
+Video: https://raw.githubusercontent.com/zSnowww/slothsort/051f9b9901c896f05d8d672224cd61dbdae9cec5/docs/demo.mp4
 
 This 16-second recording uses invented chats, a proposal previously computed by Gemma 3 4B running locally, and a simulated Telegram adapter. The CPU inference wait was omitted, but the manual corrections, simulated folder creation, and undo were recorded live. No real Telegram account is shown or modified.
 
