@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SlothSort — tus chats, en su sitio</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦥</text></svg>" />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p id="demo-banner" class="demo-banner hidden">DEMO CON DATOS SINTÉTICOS · NO MODIFICA TELEGRAM</p>
+        <span class="eyebrow">MTPROTO · MOTORES A ELECCIÓN</span>
+        <h1>Tus chats,<br /><em>en su sitio.</em></h1>
+        <p>SlothSort analiza los metadatos de tus diálogos, propone carpetas útiles y espera tu aprobación antes de crearlas en Telegram.</p>
+      </header>
+
+      <section class="card setup">
+        <div>
+          <span class="eyebrow">ESTADO</span>
+          <h2 id="connection-title">Comprobando conexiones…</h2>
+          <p id="connection-detail">Ollama y Telegram deben estar listos.</p>
+        </div>
+        <button id="plan-button" disabled>Analizar chats <span>→</span></button>
+        <button id="undo-button" class="secondary hidden" type="button">Deshacer última creación</button>
+        <p id="status" role="status"></p>
+      </section>
+
+      <section class="card analysis-options" aria-labelledby="analysis-title">
+        <div>
+          <span class="eyebrow">ANÁLISIS</span>
+          <h2 id="analysis-title">Elige cuánto contexto usar</h2>
+          <p>Elige el motor y cuánto contexto compartir. Los mensajes ayudan a clasificar, pero tardan más y pueden contener datos privados.</p>
+        </div>
+        <label for="analysis-engine">Motor de clasificación</label>
+        <select id="analysis-engine">
+          <option value="ollama">Ollama · local</option>
+          <option value="agy">Antigravity CLI · puede usar la nube</option>
+          <option value="codex">Codex CLI · puede usar la nube</option>
+          <option value="opencode">OpenCode CLI · depende del proveedor</option>
+        </select>
+        <label id="remote-consent-row" class="remote-consent hidden" for="remote-consent">
+          <input id="remote-consent" type="checkbox" />
+          Entiendo que el motor seleccionado puede enviar los títulos, descripciones y mensajes consultados a un proveedor externo.
+        </label>
+        <label for="analysis-mode">Datos que puede consultar SlothSort</label>
+        <select id="analysis-mode">
+          <option value="metadata">Solo títulos y metadatos</option>
+          <option value="descriptions">También descripciones de grupos y canales</option>
+          <option value="messages_public" selected>También mensajes recientes de grupos y canales</option>
+          <option value="messages_all">También mensajes recientes de todos los chats, incluidos privados</option>
+        </select>
+        <div id="message-limit-row">
+          <label for="message-limit">Mensajes por chat</label>
+          <select id="message-limit">
+            <option value="5">5 · más rápido</option>
+            <option value="10" selected>10 · equilibrado</option>
+            <option value="20">20 · más contexto, más lento</option>
+          </select>
+          <p>Se lee solo texto, hasta 300 caracteres por mensaje. Los chats privados se incluyen únicamente al elegir la opción anterior.</p>
+        </div>
+      </section>
+
+      <section id="results" class="card hidden">
+        <div class="results-heading">
+          <div>
+            <span class="eyebrow">PLAN PROPUESTO</span>
+            <h2>Revisa cada chat</h2>
+            <p>La confianza es una estimación del modelo. Solo las propuestas claras vienen seleccionadas; puedes mover cualquier chat.</p>
+          </div>
+          <button id="apply-button" class="secondary">Crear seleccionadas</button>
+        </div>
+        <div id="folders" class="folder-grid"></div>
+        <h3>Chats analizados</h3>
+        <div id="chat-decisions" class="decision-list"></div>
+      </section>
+
+      <footer>Los mensajes solo se consultan en los modos que los incluyen. No se guardan en el plan ni se muestran en esta página. Los motores CLI pueden conservar sus propias sesiones.</footer>
+    </main>
+    <div id="toast-region" class="toast-region" aria-live="polite" aria-atomic="true"></div>
+    <script src="/static/app.js"></script>
+  </body>
+</html>
