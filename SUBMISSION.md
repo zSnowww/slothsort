@@ -1,10 +1,6 @@
-# DEV Challenge draft — SlothSort for Telegram
+# DEV Challenge — SlothSort for Telegram
 
-This is a draft, not a published submission. Verify the public demo link before posting. Do not include Telegram credentials, session files, real chat text, or private screenshots.
-
-Suggested title: **SlothSort: Let an Open-Weight Model Tidy My Telegram Chats**
-
-Suggested tags: `devchallenge`, `hf26challenge`, `ai`, `opensource`
+The [published DEV entry](https://dev.to/zsnowww/slothsort-gemma-proposes-telegram-folders-i-approve-the-changes-229k) is the final version. This file preserves an earlier draft of the project story.
 
 *This is a submission for the [Hacktoberfest Open-Source AI Challenge Week 3: Slow and Steady](https://dev.to/challenges/hacktoberfest-week3-2026-10-19).*
 
@@ -48,11 +44,4 @@ Gemma and Ollama let the default classification flow run on my own machine inste
 
 ## Prize Categories
 
-**Best Use of Gemma** — Gemma 3 4B powers the default folder classification. Remove this section if the final demo does not actually show Gemma in use.
-
-## Before publishing
-
-- Verify that the public video and repository links work without signing in.
-- Verify the code was created during this challenge's entry period and the demo shows the submitted version.
-- Remove instructional paragraphs from this draft, proofread the article, and disclose AI assistance accurately in DEV's editor.
-- Use the challenge's submission template and required tags; publish only once for Week 3.
+**Best Use of Gemma** — Gemma 3 4B powers the default folder classification.

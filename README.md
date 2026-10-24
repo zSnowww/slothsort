@@ -7,18 +7,18 @@
 
 SlothSort analiza tus diálogos de Telegram, propone carpetas con Gemma y las crea mediante MTProto únicamente después de tu revisión chat por chat.
 
-[Ver video de la demo sintética](docs/demo.mp4) · [Ver captura](docs/demo-poster.png)
+[Leer la entrada en DEV](https://dev.to/zsnowww/slothsort-gemma-proposes-telegram-folders-i-approve-the-changes-229k) · [Ver video de la demo sintética](docs/demo.mp4) · [Ver captura](docs/demo-poster.png)
 
 ## Hacktoberfest 2026
 
 Este proyecto se creó para el [Open-Source AI Challenge, semana 3: *Slow and Steady*](https://dev.to/challenges/hacktoberfest-week3-2026-10-19). La idea del reto es usar IA abierta para ahorrar trabajo: aquí, Gemma propone cómo ordenar chats y canales sin que tengas que crear cada carpeta a mano. La revisión y la decisión final siguen siendo tuyas.
 
-La candidatura a DEV todavía no está publicada. Al presentarla, SlothSort se orienta a:
+La [entrada publicada en DEV](https://dev.to/zsnowww/slothsort-gemma-proposes-telegram-folders-i-approve-the-changes-229k) presenta el proyecto para:
 
 - **Premio general** del reto, por aplicar un modelo de pesos abiertos a una tarea repetitiva.
 - **[Best Use of Gemma](https://dev.to/challenges/hacktoberfest-week3-2026-10-19)**, porque `gemma3:4b` es el modelo predeterminado para clasificar diálogos mediante Ollama; la [demo sintética](docs/demo.mp4) muestra una propuesta calculada con él.
 
-Estas son categorías a las que apunta el proyecto, no premios ni una inscripción ya confirmados. Los [criterios y categorías oficiales](https://dev.to/challenges/hacktoberfest-week3-2026-10-19) pertenecen a DEV.
+Estas son categorías a las que apunta el proyecto, no premios obtenidos. Los [criterios y categorías oficiales](https://dev.to/challenges/hacktoberfest-week3-2026-10-19) pertenecen a DEV.
 
 ## Qué hace
 
