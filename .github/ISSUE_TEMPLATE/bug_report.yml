@@ -1,0 +1,21 @@
+name: Reportar un error
+description: Ayúdanos a reproducir un comportamiento inesperado.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Qué ocurrió
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Cómo reproducirlo
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Sistema, Python, Ollama y modelo
